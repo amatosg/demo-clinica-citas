@@ -20,6 +20,12 @@ public class Cita {
     @JoinColumn(name = "paciente_id")
     private Paciente paciente;
 
+    @Column
+    private String estado;
+
+    @Column
+    private String diagnostico;
+
     public Date getFechaHora() {
         return fechaHora;
     }
@@ -51,5 +57,21 @@ public class Cita {
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
     }
 }
